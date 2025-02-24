@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe | Portafolio Explosivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-color: #302d2e;
+            --secondary-color: #574946;
+            --bg-color: #0d0d0d;
+            --text-color: white;
+            --glow: rgba(255, 255, 255, 0.7);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: radial-gradient(circle, #0d0d0d, #1a1a1a);
+            color: var(--text-color);
+            text-align: center;
+            overflow-x: hidden;
+            animation: bgAnimation 10s infinite alternate;
+        }
+        
+        @keyframes bgAnimation {
+            0% { background: #0d0d0d; }
+            100% { background: #1a1a1a; }
+        }
+        
+        header {
+            padding: 20px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px var(--glow);
+            animation: neonBlink 1.5s infinite alternate;
+        }
+        
+        @keyframes neonBlink {
+            from { text-shadow: 0 0 10px var(--glow); }
+            to { text-shadow: 0 0 25px var(--secondary-color); }
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .section {
+            width: 80%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px var(--glow);
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .progress-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .progress-label {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .progress {
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            width: 70%;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: var(--primary-color);
+            transition: width 1s ease-in-out;
+            animation: loadingBar 2s infinite alternate;
+        }
+        
+        @keyframes loadingBar {
+            from { transform: scaleX(1); }
+            to { transform: scaleX(1.1); }
+        }
+        
+        button {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s, background 0.3s;
+            font-size: 1.2rem;
+            animation: pulseGlow 2s infinite alternate;
+        }
+        
+        @keyframes pulseGlow {
+            from { box-shadow: 0 0 10px var(--primary-color); }
+            to { box-shadow: 0 0 20px var(--secondary-color); }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        🚀 Fabricio Agüero - Desarrollador Web 🚀
+    </header>
+    
+    <div class="container">
+        <section id="about" class="section">
+            <h2>Sobre Mí</h2>
+            <p class="animated-text">Me llamo Fabricio Agüero, tengo 17 años, soy un programador con conocimientos amplios, listo para desarrollar paginas webs para su negocio</p>
+        </section>
+        
+        <section id="skills" class="section">
+            <h2>Habilidades</h2>
+            <div class="progress-container">
+                <span class="progress-label">HTML</span>
+                <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+            </div>
+            <div class="progress-container">
+                <span class="progress-label">CSS</span>
+                <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+            </div>
+            <div class="progress-container">
+                <span class="progress-label">JavaScript</span>
+                <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+            </div>
+            <div class="progress-container">
+                <span class="progress-label">Python</span>
+                <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+            </div>
+            <div class="progress-container">
+                <span class="progress-label">C++</span>
+                <div class="progress"><div class="progress-bar" style="width: 40%"></div></div>
+            </div>
+            <div class="progress-container">
+                <span class="progress-label">Pentesting</span>
+                <div class="progress"><div class="progress-bar" style="width: 93%"></div></div>
+            </div>
+        </section>
+        
+        <section id="contact" class="section">
+            <h2>Contacto</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".progress-bar").forEach(bar => {
+                bar.style.width = bar.style.width;
+            });
+        });
+    </script>
+</body>
+</html>
