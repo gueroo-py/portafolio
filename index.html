@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabricio Agüero 1 Portafolio </title>
+    <title>Fabricio Agüero | Portafolio </title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <style>
@@ -126,6 +126,27 @@
             from { box-shadow: 0 0 10px var(--primary-color); }
             to { box-shadow: 0 0 20px var(--secondary-color); }
         }
+
+        .btn-imagen {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: transform 0.3s;
+}
+
+.imagen-boton {
+    width: 30px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.btn-imagen:hover {
+    transform: scale(1.1);
+}
+
         
     </style>
 </head>
@@ -170,12 +191,14 @@
         
         <section id="contact" class="section">
             <h2>Contacto</h2>
-            <form>
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+            <button class="btn-imagen" onclick="window.location.href='wa.me/+5493487231547';">
+                <img src="C:\Users\Fabricio\Desktop\mi-portafolio\wsp.jfif" alt="Descripción de la imagen" class="imagen-boton">
+                WhatsApp
+            </button>
+            <button class="btn-imagen" onclick="window.location.href='https://instagram.com/elagueroo';">
+                <img src="C:\Users\Fabricio\Desktop\mi-portafolio\ig.jfif" alt="Descripción de la imagen" class="imagen-boton">
+                Instagram
+            </button>
         </section>
     </div>
     
