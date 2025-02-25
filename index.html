@@ -147,6 +147,47 @@
     transform: scale(1.1);
 }
 
+.btn-contacto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px;
+}
+
+.btn-contacto i {
+    font-size: 24px;
+}
+
+.whatsapp {
+    background-color: #25D366;
+    box-shadow: 0 0 10px #25D366;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #25D366;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    box-shadow: 0 0 10px #d62976;
+}
+
+.instagram:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #d62976;
+}
+
         
     </style>
 </head>
@@ -191,14 +232,12 @@
         
         <section id="contact" class="section">
             <h2>Contacto</h2>
-            <button class="btn-imagen" onclick="window.location.href='https://wa.me/?text=Hola%20Fabricio,%20nos%20intereso%20tu%20portafolio%20y%20queriamos%20saber%20sobre%20vos';">
-                <img src="C:\Users\Fabricio\Desktop\mi-portafolio\wsp.jfif" alt="Descripción de la imagen" class="imagen-boton">
-                WhatsApp
-            </button>
-            <button class="btn-imagen" onclick="window.location.href='https://instagram.com/elagueroo';">
-                <img src="C:\Users\Fabricio\Desktop\mi-portafolio\ig.jfif" alt="Descripción de la imagen" class="imagen-boton">
-                Instagram
-            </button>
+            <a href="https://wa.me/?text=Hola%20Fabricio,%20nos%20interesó%20tu%20portafolio" class="btn-contacto whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://instagram.com/elagueroo" class="btn-contacto instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
         </section>
     </div>
     
